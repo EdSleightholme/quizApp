@@ -8,6 +8,7 @@ import {
   logOut,
 } from "@/util/localStorage";
 import { Login } from "@/pages/Login";
+import { QuizPage } from "@/pages/QuizPage";
 
 function App() {
   const [user, setUser] = useState<User>();
@@ -37,7 +38,16 @@ function App() {
           <h1 className=" p-10">LOADING</h1>
         </>
       ) : loggedIn ? (
-        <button onClick={() => logOut()}></button>
+        <QuizPage
+          user={user}
+          numberOfQuestionsToAsk={5}
+          logOut={() => {
+            setLoggedIn(false);
+            setUser(undefined);
+            logOut()
+
+          }}
+        />
       ) : (
         <Login logIn={logIn} />
       )}
