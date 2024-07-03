@@ -17,6 +17,14 @@ export const getLoginDetails = () => {
   }
 };
 
+export const getHighScoreLocalStorage = () => {
+  return localStorage.getItem("highScore");
+};
+
+export const setHighScoreLocalStorage = (highScore: string) => {
+  localStorage.setItem("highScore", highScore);
+};
+
 export const logInLocalStorage = (user: User) => {
   localStorage.setItem("firstName", user.firstName);
   localStorage.setItem("lastName", user.lastName);
@@ -29,4 +37,5 @@ export const logOut = () => {
   localStorage.removeItem("lastName");
   localStorage.removeItem("email");
   localStorage.removeItem("loggedIn");
+  localStorage.removeItem("highScore");
 };

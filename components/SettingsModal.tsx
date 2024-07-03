@@ -4,7 +4,7 @@ import { Button } from "./Button";
 interface IProps {
   user?: User;
   logOut?: () => void;
-  highScore: number;
+  highScore: string;
 }
 export const SettingsModal = ({ user, highScore, logOut }: IProps) => {
   return (
