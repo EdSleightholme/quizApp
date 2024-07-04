@@ -10,8 +10,8 @@ export const SetUpQuiz = ({ startQuiz }: IProps) => {
   const [questionError, setQuestionError] = useState("");
 
   const attemptToStartQuiz = () => {
-    if (numberOfQuestions < 1) {
-      setQuestionError("Must be a positive number of questions");
+    if (numberOfQuestions < 5) {
+      setQuestionError("Must have at least 5 questions");
       return;
     }
     if (numberOfQuestions > 100) {
@@ -23,7 +23,7 @@ export const SetUpQuiz = ({ startQuiz }: IProps) => {
 
   return (
     <>
-      <div>Set Up Quiz</div>
+      <h2 className="text-lg underline">Set Up Quiz</h2>
       <div>How many questions should the quiz be?</div>
       <TextInput
         name={"numberOfQuestions"}
@@ -35,7 +35,9 @@ export const SetUpQuiz = ({ startQuiz }: IProps) => {
         error={!!questionError}
         helpText={questionError}
       />
-      <Button onClick={attemptToStartQuiz}>Start Quiz</Button>
+      <div className="p-2">
+        <Button onClick={attemptToStartQuiz}>Start Quiz</Button>
+      </div>
     </>
   );
 };

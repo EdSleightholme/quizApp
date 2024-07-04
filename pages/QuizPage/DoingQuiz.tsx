@@ -57,7 +57,7 @@ export const DoingQuiz = ({
   return (
     <>
       <div>Current Score : {currentScore}</div>
-      <div>Total Number of Questions :{totalNumberOfQuestionsInQuiz} </div>
+      <div>Total Number of Questions In Quiz:{totalNumberOfQuestionsInQuiz} </div>
       <div>
         Question {currentQuestionNumber + 1} : {currentQuestion?.question}
       </div>
@@ -90,7 +90,7 @@ export const DoingQuiz = ({
           </div>
         </div>
       ) : (
-        <div className="flex space-x-1 py-4">
+        <div className="flex space-x-1 py-4 p-2">
           {possibleQuestionAnswers.map((option) => (
             <Button
               key={option}

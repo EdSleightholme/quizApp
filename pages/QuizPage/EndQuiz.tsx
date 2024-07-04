@@ -12,7 +12,7 @@ export const EndQuiz = ({
 }: IProps) => {
   return (
     <>
-      <h2>Quiz Complete</h2>
+      <h2 className="text-lg underline">Quiz Complete</h2>
       <div>
         You scored {currentScore} out of {totalNumberOfQuestionsInQuiz}{" "}
       </div>
@@ -21,7 +21,9 @@ export const EndQuiz = ({
         {Math.round((currentScore / totalNumberOfQuestionsInQuiz) * 100)}%
         correct.
       </div>
-      <Button onClick={goToSetupQuiz}>Start A New Quiz</Button>
+      <div className="p-2">
+        <Button onClick={goToSetupQuiz}>Start A New Quiz</Button>
+      </div>
     </>
   );
 };

@@ -34,17 +34,9 @@ export const TextInput = ({
       disabled={disabled}
       type={number ? "number" : password ? "password" : "text"}
       id={name}
-      /*BUG  something weird is going on with the import order as border-red is being added before border-slate 
-      add fix so it would work as intended but in real world i would fix the bug. Probably something to do with config and vite
-    //   className={`${
-    //     error && " border-2 border-red-600 ring-red-500"
-    //   } border-2 border-slate-300 block w-full rounded-lg   bg-slate-100 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500  `}
-    */
       className={`${
-        error
-          ? " border-2 border-red-600 ring-red-500"
-          : "border-2 border-slate-300"
-      }  block w-full rounded-lg bg-slate-100 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500  `}
+        error ? " border-red-600 ring-red-500" : " border-slate-300"
+      } border-2  block w-full rounded-lg bg-slate-100 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500  `}
       placeholder={placeholder}
       value={value}
       onChange={(event) => onChange(event.target.value)}

@@ -1,7 +1,9 @@
+import { MouseEvent } from "react";
+
 interface IProps {
   variant?: "default" | "destructive" | "outline";
   children?: React.ReactNode;
-  onClick?: (event: Event) => void;
+  onClick?: (event: MouseEvent) => void;
   disabled?: boolean;
   submit?: boolean;
   inactive?: boolean;

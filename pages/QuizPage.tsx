@@ -78,7 +78,7 @@ export const QuizPage = ({ user, logOut }: IProps) => {
           />
         </Modal>
       )}
-      <h1 className=" text-9xl underline">Quiz App</h1>
+      <h1 className=" text-9xl pb-8 underline">Quiz App</h1>
 
       {displaySetUpQuizScreen && <SetUpQuiz startQuiz={startQuiz} />}
       {displayEndQuizScreen && (
@@ -94,7 +94,7 @@ export const QuizPage = ({ user, logOut }: IProps) => {
           endQuiz={endQuiz}
         />
       )}
-      <div className=" p-2 w-auto">
+      <div className="p-2 w-auto">
         <Button onClick={() => setViewSettings(true)}>Settings</Button>
       </div>
     </div>

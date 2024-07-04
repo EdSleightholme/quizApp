@@ -16,7 +16,7 @@ export const SettingsModalContent = ({ user, highScore, logOut }: IProps) => {
           ? (user?.firstName ?? "") + " " + (user?.lastName ?? "")
           : user?.email}
       </div>
-      <div>High Score : {highScore}</div>
+      {highScore && <div>High Score : {highScore}</div>}
       <Button onClick={logOut}>Log Out</Button>
     </div>
   );

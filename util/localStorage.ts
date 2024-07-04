@@ -1,3 +1,5 @@
+//This file does all the inserting and getting from localStorage so localStorage can be easily maintained
+
 export interface User {
   firstName: string;
   lastName: string;
