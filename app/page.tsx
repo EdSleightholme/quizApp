@@ -40,7 +40,6 @@ function App() {
       ) : loggedIn ? (
         <QuizPage
           user={user}
-          numberOfQuestionsToAsk={5}
           logOut={() => {
             setLoggedIn(false);
             setUser(undefined);

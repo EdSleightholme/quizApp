@@ -1,12 +1,12 @@
 import { User } from "@/util/localStorage";
-import { Button } from "./Button";
+import { Button } from "../../components/Button";
 
 interface IProps {
   user?: User;
   logOut?: () => void;
   highScore: string;
 }
-export const SettingsModal = ({ user, highScore, logOut }: IProps) => {
+export const SettingsModalContent = ({ user, highScore, logOut }: IProps) => {
   return (
     <div className="flex p-4 flex-col space-y-4 text-center">
       <h2 className=" underline">Settings</h2>
