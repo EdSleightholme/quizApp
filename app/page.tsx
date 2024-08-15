@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center p-2 w-96 text-center">
+    <div className="flex flex-col justify-center items-center p-2 w-full text-center">
       {loading ? (
         <>
           <h1 className=" p-10">LOADING</h1>
